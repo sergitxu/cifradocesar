@@ -2,13 +2,40 @@
 <HEAD>
 </HEAD>
 <BODY>
+
 <form>
   <label for="message">Mensaje a cifrar:</label>
   <input type="text" id="message" name="message">
+  <br><br>
   <label for="positions">Posiciones a correr:</label>
   <input type="number" id="positions" name="positions">
-  <input type="button" value="Cifrar">
+  <br><br>
+  <input type="button" id="encryptButton" value="Cifrar">
+</form>
+
+<br><br><br>
+
+<form>
+  <label for="encriptedMessage">Mensaje a descifrar:</label>
+  <input type="text" id="encriptedMessage" name="encriptedMessage">
+  <br><br>
   <input type="button" value="Descifrar">
 </form>
+
+<script>
+  (function (){
+    const abc = [];
+    
+
+    document.getElementById("encryptButton").addEventListener("click", encrypt);
+
+    function encrypt() {
+      var pos =  document.getElementById('positions').value;
+      console.log(pos);
+    }
+
+  })();
+</script>
+
 </BODY>
 </HTML>
